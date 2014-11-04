@@ -7,6 +7,20 @@ class ProductsController < ApplicationController
     @products = Product.all
 
     @chunkyBacon = "Chunky Bacon"
+
+    @productPrice = 0
+    @productQoS = 0
+
+    @products.each do |p|
+      @productPrice = @productPrice + p.price 
+      @productQoS = @productQoS + p.stock_quantity
+    end
+
+    @productCount = @products.count
+    @productAvg = @productPrice / @products.count
+
+
+
   end
 
   # GET /products/1

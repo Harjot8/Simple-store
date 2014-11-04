@@ -28,6 +28,10 @@
 <br>
 
 <%= link_to 'New Product', new_product_path %>
+<p>The Average of all Prices is (<%= @productAvg %>)</p>
+<p>The Maximum price is (<%= @productMax %>)</p>
+<p>The Total number of unique products are (<%= @ProductCount %>)</p>
+<p>The quantity of stock summed is (<%= @productQoS %>)</p>
 
 
 <% 100.times do %>
